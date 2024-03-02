@@ -1,0 +1,13 @@
+.list-coffee-container {
+  background-color: #1b1d1f;
+  width: 1200px;
+  height: 1000px;
+  border-radius: 12px;
+  position: absolute;
+  top: 170px;
+  left: 100px;
+}
+.article-container {
+  color: #fef7ee;
+  text-align: center;
+}
