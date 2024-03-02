@@ -9,5 +9,19 @@
 }
 .article-container {
   color: #fef7ee;
+  background-image: url(./assets/images/vector.svg);
+  background-repeat: no-repeat;
+  height: 20%;
+  background-position: center;
   text-align: center;
+}
+
+.article-content {
+  padding: 100px;
+  text-align: center;
+}
+
+.article-content__paragraph {
+  text-align: center;
+  margin: 7px 231px 0px;
 }
