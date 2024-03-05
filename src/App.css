@@ -1,11 +1,13 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.App {
+body {
   background-color: #08090a;
+}
+.App {
   min-height: 100vh;
   min-height: 100vw;
 }
