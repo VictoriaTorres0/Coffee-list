@@ -1,6 +1,6 @@
 import React from "react";
 import "./ListCoffeeContainer.css";
-import Parrafos from "./Parrafos.jsx";
+import "./CoffeePriceCard.jsx";
 function Listcoffeecontainer() {
   return (
     <div className="list-coffee-container">
@@ -12,6 +12,10 @@ function Listcoffeecontainer() {
             from different roast types and origins, expertly roasted in small
             batches and shipped fresh weekly.
           </p>
+          <div className="content-container-button">
+            <button className="article-content__button">All Products</button>
+            <button className="article-content__button">Available Now</button>
+          </div>
         </div>
       </div>
     </div>

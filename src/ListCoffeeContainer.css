@@ -5,7 +5,7 @@
   border-radius: 12px;
   position: absolute;
   top: 170px;
-  left: 100px;
+  left: 5%;
 }
 .article-container {
   color: #fef7ee;
@@ -24,4 +24,17 @@
 .article-content__paragraph {
   text-align: center;
   margin: 7px 231px 0px;
+  padding-bottom: 17px;
+}
+.content-container-button {
+  gap: 17px;
+  display: inline-flex;
+}
+.article-content__button {
+  color: #fef7ee;
+  font-weight: 500;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6f757c;
 }
