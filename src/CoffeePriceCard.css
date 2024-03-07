@@ -3,3 +3,44 @@
   width: 300px;
   height: 250px;
 }
+
+.coffee-type {
+  font-weight: 400;
+  color: #fef7ee;
+}
+
+.container-types__coffees {
+  height: 22px;
+  background-image: url(./assets/images/Star_fill.svg);
+  background-repeat: no-repeat;
+  background-position: left 0px;
+  color: #fef7ee;
+}
+.coffe-votes {
+  margin-left: 30px;
+  display: flex;
+  gap: 5px;
+}
+.coffe-votes span {
+  color: #6f757c;
+}
+
+.coffee-type--price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.coffee-price {
+  background-color: #bee3cc;
+  color: #111315;
+  font-weight: 500;
+  padding: 1%;
+  width: 14%;
+  border-radius: 10px;
+}
+
+.sold-out {
+  color: #ed735d;
+  margin-left: 85px;
+}
