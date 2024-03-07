@@ -14,7 +14,6 @@ function Listcoffeecontainer() {
   useEffect(() => {
     ObtenerCoffees();
   }, []);
-
   return (
     <div className="list-coffee-container">
       <div className="article-container">
@@ -34,9 +33,12 @@ function Listcoffeecontainer() {
       <div className="Card-container">
         {coffees.map((coffee) => (
           <CoffeePriceCard
-            id={coffee.id}
-            image={coffee.image}
             title={coffee.title}
+            image={coffee.image}
+            id={coffee.id}
+            // price={coffee.price}
+            price={5.0}
+            delimited={"sold out"}
           />
         ))}
       </div>

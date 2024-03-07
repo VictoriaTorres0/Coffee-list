@@ -1,23 +1,22 @@
 .list-coffee-container {
   background-color: #1b1d1f;
   width: 1200px;
-  height: 1000px;
   border-radius: 12px;
   position: absolute;
   top: 170px;
-  left: 5%;
+  left: 50%;
+  translate: -50%;
 }
 .article-container {
   color: #fef7ee;
   background-image: url(./assets/images/vector.svg);
   background-repeat: no-repeat;
-  height: 20%;
   background-position: center;
   text-align: center;
 }
 
 .article-content {
-  padding: 100px;
+  padding: 70px;
   text-align: center;
 }
 
@@ -41,5 +40,8 @@
 .Card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  row-gap: 44px;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
 }
