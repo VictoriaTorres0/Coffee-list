@@ -38,3 +38,8 @@
   border-radius: 6px;
   background-color: #6f757c;
 }
+.Card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}

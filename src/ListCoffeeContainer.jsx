@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ListCoffeeContainer.css";
 import "./CoffeePriceCard.jsx";
+import CoffeePriceCard from "./CoffeePriceCard.jsx";
 function Listcoffeecontainer() {
+  const [coffees, setCoffees] = React.useState([]);
+
+  const ObtenerCoffees = async () => {
+    const respuesta = await fetch("https://api.sampleapis.com/coffee/hot");
+    const resultado = await respuesta.json();
+    setCoffees(resultado);
+  };
+
+  useEffect(() => {
+    ObtenerCoffees();
+  }, []);
+
   return (
     <div className="list-coffee-container">
       <div className="article-container">
@@ -17,6 +30,15 @@ function Listcoffeecontainer() {
             <button className="article-content__button">Available Now</button>
           </div>
         </div>
+      </div>
+      <div className="Card-container">
+        {coffees.map((coffee) => (
+          <CoffeePriceCard
+            id={coffee.id}
+            image={coffee.image}
+            title={coffee.title}
+          />
+        ))}
       </div>
     </div>
   );
