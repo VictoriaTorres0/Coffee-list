@@ -72,9 +72,39 @@
 
 @media only screen and (max-width: 640px) {
   .list-coffee-container {
-    width: 452px;
+    width: 378px;
+    top: 75px;
+  }
+  .article-content {
+    font-size: 12px;
+  }
+  .article-content__paragraph {
+    font-size: 11px;
   }
   .Card-container {
     grid-template-columns: 1fr;
+  }
+  .article-content__button {
+    font-size: 11px;
+    padding: 3px;
+  }
+  .imagen {
+    width: 225px;
+    height: 200px;
+  }
+  .container-popular {
+    font-weight: 500;
+    font-size: 10px;
+    padding: 2px;
+  }
+  .coffee-type {
+    font-size: 14px;
+  }
+  .coffee-price {
+    font-size: 14px;
+    width: 19%;
+  }
+  .container-types__coffees {
+    font-size: 14px;
   }
 }

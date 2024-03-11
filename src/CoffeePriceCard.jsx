@@ -19,6 +19,7 @@ function CoffeePriceCard({
       )}
 
       <img
+        className="imagen"
         alt="Coffe"
         src={image}
         width={300}
