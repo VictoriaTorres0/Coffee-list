@@ -1,5 +1,6 @@
 import React from "react";
 import "./CoffeePriceCard.css";
+
 function CoffeePriceCard({
   id,
   title,
@@ -12,7 +13,7 @@ function CoffeePriceCard({
 }) {
   return (
     <div className="container-img" key={id}>
-      {popular === true && (
+      {popular && (
         <div className="container-popular">
           <p>popular</p>
         </div>
@@ -35,7 +36,7 @@ function CoffeePriceCard({
         <p className="coffe-votes">
           {rating} <span>({votes} votes)</span>
         </p>
-        {delimited === true && <p className="sold-out">sold out</p>}
+        {delimited && <p className="sold-out">sold out</p>}
       </div>
     </div>
   );

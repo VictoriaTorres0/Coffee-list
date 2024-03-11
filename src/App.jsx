@@ -1,5 +1,5 @@
 import "./App.css";
-import ListCoffeeContainer from "./ListCoffeeContainer.jsx";
+import ListCoffeeContainer from "./pages/ListCoffeeContainer";
 
 function App() {
   return (

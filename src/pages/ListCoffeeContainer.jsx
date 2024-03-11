@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./ListCoffeeContainer.css";
-import CoffeePriceCard from "./CoffeePriceCard.jsx";
+import CoffeePriceCard from "../components/CoffeePriceCard.jsx";
 
 function Listcoffeecontainer() {
   const [coffees, setCoffees] = React.useState([]);

@@ -11,7 +11,7 @@
 
 .container-types__coffees {
   height: 22px;
-  background-image: url(./assets/images/Star_fill.svg);
+  background-image: url(../assets/images/Star_fill.svg);
   background-repeat: no-repeat;
   background-position: left 0px;
   color: #fef7ee;
