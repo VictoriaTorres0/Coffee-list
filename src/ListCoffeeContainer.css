@@ -6,6 +6,7 @@
   top: 170px;
   left: 50%;
   translate: -50%;
+  padding-bottom: 5%;
 }
 .article-container {
   color: #fef7ee;
@@ -35,6 +36,10 @@
   padding: 6px;
   border: none;
   border-radius: 6px;
+  background-color: #1b1d1f;
+  cursor: pointer;
+}
+.botonSeleccionado {
   background-color: #6f757c;
 }
 .Card-container {
