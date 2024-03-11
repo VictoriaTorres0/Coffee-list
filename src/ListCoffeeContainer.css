@@ -50,3 +50,31 @@
   align-items: center;
   place-items: center;
 }
+
+/*TABLET*/
+
+@media only screen and (max-width: 1024px) {
+  .list-coffee-container {
+    width: 680px;
+  }
+  .article-content__paragraph {
+    margin: 7px 49px 0px;
+  }
+  .Card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .article-content {
+    padding: 43px;
+  }
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 640px) {
+  .list-coffee-container {
+    width: 452px;
+  }
+  .Card-container {
+    grid-template-columns: 1fr;
+  }
+}
