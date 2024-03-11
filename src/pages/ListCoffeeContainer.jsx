@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./ListCoffeeContainer.css";
 import CoffeePriceCard from "../components/CoffeePriceCard.jsx";
 
 function Listcoffeecontainer() {
-  const [coffees, setCoffees] = React.useState([]);
-  const [filtered, setFiltered] = React.useState([]);
-  const [opcion, setOpcion] = React.useState("");
+  const [coffees, setCoffees] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [selectedButton, setSelectedButton] = useState(1);
 
   const getCoffees = async () => {
     const respuesta = await fetch(
@@ -19,12 +19,12 @@ function Listcoffeecontainer() {
   const filterSoldOutCoffees = () => {
     const allCoffees = coffees.filter((cafe) => cafe.sold_out === false);
     setFiltered(allCoffees);
-    setOpcion("boton-2");
+    setSelectedButton(2);
   };
 
-  const filterAllCoffess = () => {
+  const filterAllCoffees = () => {
     setFiltered(coffees);
-    setOpcion("boton-1");
+    setSelectedButton(1);
   };
 
   useEffect(() => {
@@ -44,15 +44,15 @@ function Listcoffeecontainer() {
           <div className="content-container-button">
             <button
               className={`article-content__button ${
-                opcion === "boton-1" ? "botonSeleccionado" : ""
+                selectedButton === 1 ? "botonSeleccionado" : ""
               }`}
-              onClick={filterAllCoffess}
+              onClick={filterAllCoffees}
             >
               All Products
             </button>
             <button
               className={`article-content__button ${
-                opcion === "boton-2" ? "botonSeleccionado" : ""
+                selectedButton === 2 ? "botonSeleccionado" : ""
               }`}
               onClick={filterSoldOutCoffees}
             >
