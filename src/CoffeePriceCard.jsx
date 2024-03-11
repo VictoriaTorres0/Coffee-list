@@ -34,8 +34,8 @@ function CoffeePriceCard({
       <div className="container-types__coffees">
         <p className="coffe-votes">
           {rating} <span>({votes} votes)</span>
-          {delimited === true && <p className="sold-out">sold out</p>}
         </p>
+        {delimited === true && <p className="sold-out">sold out</p>}
       </div>
     </div>
   );
