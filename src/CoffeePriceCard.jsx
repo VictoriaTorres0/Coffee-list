@@ -1,8 +1,23 @@
 import React from "react";
 import "./CoffeePriceCard.css";
-function CoffeePriceCard({ id, title, image, price, delimited }) {
+function CoffeePriceCard({
+  id,
+  title,
+  image,
+  price,
+  delimited,
+  popular,
+  rating,
+  votes,
+}) {
   return (
-    <div key={id}>
+    <div className="container-img" key={id}>
+      {popular === true && (
+        <div className="container-popular">
+          <p>popular</p>
+        </div>
+      )}
+
       <img
         src={image}
         width={300}
@@ -16,8 +31,8 @@ function CoffeePriceCard({ id, title, image, price, delimited }) {
       </div>
       <div className="container-types__coffees">
         <p className="coffe-votes">
-          4.85 <span>(14 votes)</span>
-          <p className="sold-out">{delimited}</p>
+          {rating} <span>({votes} votes)</span>
+          {delimited === true && <p className="sold-out">sold out</p>}
         </p>
       </div>
     </div>
