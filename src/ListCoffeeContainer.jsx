@@ -1,33 +1,34 @@
 import React, { useEffect } from "react";
 import "./ListCoffeeContainer.css";
 import CoffeePriceCard from "./CoffeePriceCard.jsx";
+
 function Listcoffeecontainer() {
   const [coffees, setCoffees] = React.useState([]);
-  const [filtrado, setFiltrado] = React.useState([]);
+  const [filtered, setFiltered] = React.useState([]);
   const [opcion, setOpcion] = React.useState("");
 
-  const ObtenerCoffees = async () => {
+  const getCoffees = async () => {
     const respuesta = await fetch(
       "https://65ece95f0ddee626c9b10814.mockapi.io/api/coffe"
     );
     const resultado = await respuesta.json();
     setCoffees(resultado);
-    setFiltrado(resultado);
+    setFiltered(resultado);
   };
 
-  const CoffeeFilter = () => {
-    const disponibles = coffees.filter((cafe) => cafe.sold_out === false);
-    setFiltrado(disponibles);
+  const filterSoldOutCoffees = () => {
+    const allCoffees = coffees.filter((cafe) => cafe.sold_out === false);
+    setFiltered(allCoffees);
     setOpcion("boton-2");
   };
 
-  const todosLosCafes = () => {
-    setFiltrado(coffees);
+  const filterAllCoffess = () => {
+    setFiltered(coffees);
     setOpcion("boton-1");
   };
 
   useEffect(() => {
-    ObtenerCoffees();
+    getCoffees();
   }, []);
 
   return (
@@ -45,16 +46,15 @@ function Listcoffeecontainer() {
               className={`article-content__button ${
                 opcion === "boton-1" ? "botonSeleccionado" : ""
               }`}
-              onClick={() => todosLosCafes()}
+              onClick={filterAllCoffess}
             >
-              {" "}
               All Products
             </button>
             <button
               className={`article-content__button ${
                 opcion === "boton-2" ? "botonSeleccionado" : ""
               }`}
-              onClick={() => CoffeeFilter()}
+              onClick={filterSoldOutCoffees}
             >
               Available Now
             </button>
@@ -62,8 +62,9 @@ function Listcoffeecontainer() {
         </div>
       </div>
       <div className="Card-container">
-        {filtrado.map((coffee) => (
+        {filtered.map((coffee) => (
           <CoffeePriceCard
+            key={coffee.id}
             title={coffee.title}
             image={coffee.image}
             id={coffee.id}

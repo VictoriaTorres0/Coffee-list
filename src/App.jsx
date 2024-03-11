@@ -4,7 +4,7 @@ import ListCoffeeContainer from "./ListCoffeeContainer.jsx";
 function App() {
   return (
     <div className="App">
-      <div className="image-header"></div>
+      <div className="image-header" />
       <ListCoffeeContainer />
     </div>
   );
