@@ -72,7 +72,7 @@
 
 @media only screen and (max-width: 640px) {
   .list-coffee-container {
-    width: 378px;
+    width: 100%;
     top: 75px;
   }
   .article-content {
